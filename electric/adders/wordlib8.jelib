@@ -54,6 +54,20 @@ EI4||D5G2;|pin@12||I
 ES||D5G2;|pin@14||O
 X
 
+# Cell FTC;1{lay}
+CFTC;1{lay}||mocmos|1382755171798|1382756312783|
+Imuddlib07:a2o1_1x;1{lay}|a2o1_1x@0||329|4|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+Imuddlib07:nand2_1x;1{lay}|nand2_1x@0||-2|2|||D5G4;
+Imuddlib07:nand2_1x;1{lay}|nand2_1x@1||30|1|||D5G4;
+Imuddlib07:nand2_1x;1{lay}|nand2_1x@2||65|1|||D5G4;
+Imuddlib07:o2a1i_1x;1{lay}|o2a1i_1x@0||102|-1|||D5G4;
+Imuddlib07:o2a1i_1x;1{lay}|o2a1i_1x@1||139|-2|||D5G4;
+Imuddlib07:o22a2i_1x;1{lay}|o22a2i_1@0||186|10|||D5G4;
+Imuddlib07:xor2_2x;1{lay}|xor2_2x@0||386|2|||D5G4;
+Imuddlib07:xor2_2x;1{lay}|xor2_2x@1||238|10|||D5G4;
+X
+
 # Cell FTC;2{sch}
 CFTC;2{sch}||schematic|1382752574212|1382754452273|
 IFTC;1{ic}|FTC@0||50|34|||D5G4;
@@ -1439,7 +1453,7 @@ Ngeneric:Facet-Center|art@0||0|0||||AV
 X
 
 # Groups:
-GFTC;2{sch}|FTC;1{ic}
+GFTC;2{sch}|FTC;1{ic}|FTC;1{lay}
 Gadder_8;1{sch}|adder_8;1{ic}|adder_8;1{lay}
 Gflop_1x_8;1{sch}|flop_1x_8;1{ic}|flop_1x_8;1{lay}
 Gflopen_1x_8;1{sch}|flopen_1x_8;1{ic}|flopen_1x_8;1{lay}
