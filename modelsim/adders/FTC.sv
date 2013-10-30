@@ -1,8 +1,8 @@
 
-module testbench();
+module testbenchFTC();
     logic clk;
     logic Cin, I1, I2, I3, I4, C, Cout, S;
-    logic [7:0] vectors[8:0], currentvec;
+    logic [7:0] vectors[31:0], currentvec;
     logic [6:0] vectornum, errors;
     
     // The device under test
@@ -20,27 +20,25 @@ module testbench();
     // apply test
     always @(posedge clk) begin
        currentvec = vectors[vectornum];
-       Cin = currentvec[1];
-       I1 = currentvec[2];
-       I2 = currentvec[3];
+       Cin = currentvec[7];
+       I1 = currentvec[6];
+       I2 = currentvec[5];
        I3 = currentvec[4];
-       I4 = currentvec[5];
-       C = currentvec[6];
-       Cout = currentvec[7];
-       S = currentvec[8];
+       I4 = currentvec[3];
        
-       if (currentvec[0] === 1'bx) begin
+       if (vectornum === 31) begin
          $display("Completed %d tests with %d errors.", 
                   vectornum, errors);
          $stop;
        end
     end
+    
     // check if test was sucessful and apply next one
     always @(negedge clk) begin
-       if ((y !== currentvec[0])) begin
-          $display("Error: inputs were a=%h b=%h", a, b);
-          $display("       output mismatches as %h (%h expected)", 
-                   currentvec[0], y);
+       if ((S !== currentvec[0]) || (Cout !== currentvec[1]) || ( C !== currentvec[2])) begin
+          $display("Error: inputs were Cin=%h I1=%h I2=%h I3=%h I4=%h", Cin, I1, I2, I3, I4);
+          $display("Check C : %h (%h expected), Cout %h (%h expected), 
+          S %h (%h expected)", C , currentvec[2], Cout, currentvec[1], S, currentvec[0]);
           errors = errors + 1;
        end
        vectornum = vectornum + 1;
@@ -147,6 +145,8 @@ module muddlib07__xor2_2x(a, b, y);
   tranif0 pmos_5(ab, vdd, a);
   tranif0 pmos_6(y, vdd, net_5);
 endmodule   /* muddlib07__xor2_2x */
+
+
 
 module FTC(Cin, I1, I2, I3, I4, C, Cout, S);
   input Cin;
