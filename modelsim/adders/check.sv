@@ -37,10 +37,7 @@ module testbench();
     
     // check if test was sucessful and apply next one
     always @(negedge clk) begin
-      // if ((S !== currentvec[0]) || (Cout !== currentvec[1]) || ( C !== currentvec[2])) begin
-          $display("%h%h%h%h%h%h%h%h", Cin, I1, I2, I3, I4, C, Cout, S);
-       //   errors = errors + 1;
-      // end
+         $display("%h%h%h%h%h%h%h%h", Cin, I1, I2, I3, I4, C, Cout, S);
       vectornum = vectornum + 1;
     end
 

@@ -1,0 +1,20 @@
+# Project file /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/adders.mpf was not found.
+# Unable to open project.
+# Loading project FTC
+# Compile of check.sv was successful.
+# Compile of FTC.sv was successful with warnings.
+# Compile of FTC.v was successful.
+# 3 compiles, 0 failed with no errors. 
+vsim work.testbenchFTC
+# vsim work.testbenchFTC 
+# Loading sv_std.std
+# Loading work.testbenchFTC
+# Loading work.FTC
+# Loading work.muddlib07__a2o1_1x
+# Loading work.muddlib07__nand2_1x
+# Loading work.muddlib07__o2a1i_1x
+# Loading work.muddlib07__o22a2i_1x
+# Loading work.muddlib07__xor2_2x
+run -all
+# Completed  31 tests with   0 errors.
+# Break in Module testbenchFTC at /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv line 32

@@ -1,27 +1,59 @@
 /* Verilog for cell 'FTC{sch}' from library 'wordlib8' */
-/* Created on Fri Oct 25, 2013 21:56:14 */
-/* Last revised on Fri Oct 25, 2013 22:27:32 */
-/* Written on Tue Oct 29, 2013 15:50:09 by Electric VLSI Design System, version 8.06 */
+/* Created on Sun Nov 03, 2013 18:07:48 */
+/* Last revised on Sun Nov 03, 2013 19:29:01 */
+/* Written on Sun Nov 03, 2013 19:33:51 by Electric VLSI Design System, version 8.06 */
 
-module muddlib07__a2o1_1x(a, b, c, y);
+module muddlib07__fulladder(a, b, c, cout, s);
   input a;
   input b;
   input c;
+  output cout;
+  output s;
+
+  supply1 vdd;
+  supply0 gnd;
+  wire coutb, net_1, net_11, net_111, net_23, net_32, net_33, net_90, net_92;
+  wire net_94, net_95, sb;
+
+  tranif1 nmos_0(gnd, net_1, a);
+  tranif1 nmos_1(gnd, net_1, b);
+  tranif1 nmos_2(net_1, coutb, c);
+  tranif1 nmos_3(gnd, net_11, a);
+  tranif1 nmos_4(net_11, coutb, b);
+  tranif1 nmos_5(gnd, net_23, a);
+  tranif1 nmos_6(gnd, net_23, b);
+  tranif1 nmos_7(gnd, net_23, c);
+  tranif1 nmos_8(net_23, sb, coutb);
+  tranif1 nmos_9(gnd, net_33, a);
+  tranif1 nmos_10(net_33, net_32, b);
+  tranif1 nmos_11(net_32, sb, c);
+  tranif1 nmos_12(gnd, cout, coutb);
+  tranif1 nmos_13(gnd, s, sb);
+  tranif0 pmos_1(sb, net_92, c);
+  tranif0 pmos_2(net_92, net_90, b);
+  tranif0 pmos_3(net_90, vdd, a);
+  tranif0 pmos_4(sb, net_94, coutb);
+  tranif0 pmos_5(net_94, vdd, b);
+  tranif0 pmos_6(net_94, vdd, c);
+  tranif0 pmos_7(net_94, vdd, a);
+  tranif0 pmos_8(cout, vdd, coutb);
+  tranif0 pmos_9(net_95, vdd, a);
+  tranif0 pmos_10(coutb, net_95, b);
+  tranif0 pmos_11(net_111, vdd, a);
+  tranif0 pmos_12(net_111, vdd, b);
+  tranif0 pmos_13(coutb, net_111, c);
+  tranif0 pmos_14(s, vdd, sb);
+endmodule   /* muddlib07__fulladder */
+
+module muddlib07__inv_1x(a, y);
+  input a;
   output y;
 
   supply1 vdd;
   supply0 gnd;
-  wire net_0, net_11, net_19;
-
-  tranif1 nmos_0(gnd, net_19, a);
-  tranif1 nmos_1(net_19, net_0, b);
-  tranif1 nmos_2(gnd, net_0, c);
-  tranif1 nmos_3(gnd, y, net_0);
-  tranif0 pmos_0(net_0, net_11, c);
-  tranif0 pmos_1(net_11, vdd, b);
-  tranif0 pmos_2(net_11, vdd, a);
-  tranif0 pmos_3(y, vdd, net_0);
-endmodule   /* muddlib07__a2o1_1x */
+  tranif1 nmos_0(gnd, y, a);
+  tranif0 pmos_0(y, vdd, a);
+endmodule   /* muddlib07__inv_1x */
 
 module muddlib07__nand2_1x(a, b, y);
   input a;
@@ -38,69 +70,26 @@ module muddlib07__nand2_1x(a, b, y);
   tranif0 pmos_1(y, vdd, a);
 endmodule   /* muddlib07__nand2_1x */
 
-module muddlib07__o2a1i_1x(a, b, c, y);
-  input a;
-  input b;
-  input c;
-  output y;
+module muddlib07__xnor_ds(A, B, Y);
+  input A;
+  input B;
+  output Y;
 
   supply1 vdd;
   supply0 gnd;
-  wire net_35, net_7;
+  wire net_0, net_1, net_11, net_28;
 
-  tranif1 nmos_0(gnd, net_7, a);
-  tranif1 nmos_1(gnd, net_7, b);
-  tranif1 nmos_2(net_7, y, c);
-  tranif0 pmos_0(y, net_35, b);
-  tranif0 pmos_1(net_35, vdd, a);
-  tranif0 pmos_3(y, vdd, c);
-endmodule   /* muddlib07__o2a1i_1x */
-
-module muddlib07__o22a2i_1x(a, b, c, d, y);
-  input a;
-  input b;
-  input c;
-  input d;
-  output y;
-
-  supply1 vdd;
-  supply0 gnd;
-  wire net_34, net_35, net_7;
-
-  tranif1 nmos_0(gnd, net_7, a);
-  tranif1 nmos_1(gnd, net_7, b);
-  tranif1 nmos_2(net_7, y, c);
-  tranif1 nmos_3(net_7, y, d);
-  tranif0 pmos_0(y, net_35, b);
-  tranif0 pmos_1(net_35, vdd, a);
-  tranif0 pmos_2(y, net_34, d);
-  tranif0 pmos_3(net_34, vdd, c);
-endmodule   /* muddlib07__o22a2i_1x */
-
-module muddlib07__xor2_2x(a, b, y);
-  input a;
-  input b;
-  output y;
-
-  supply1 vdd;
-  supply0 gnd;
-  wire ab, bb, net_3, net_4, net_5, net_7, net_8;
-
-  tranif1 nmos_0(gnd, net_3, a);
-  tranif1 nmos_1(gnd, net_4, ab);
-  tranif1 nmos_2(net_3, net_5, bb);
-  tranif1 nmos_3(net_4, net_5, b);
-  tranif1 nmos_4(gnd, bb, b);
-  tranif1 nmos_5(gnd, ab, a);
-  tranif1 nmos_6(gnd, y, net_5);
-  tranif0 pmos_0(net_5, net_7, b);
-  tranif0 pmos_1(net_7, vdd, a);
-  tranif0 pmos_2(net_5, net_8, bb);
-  tranif0 pmos_3(net_8, vdd, ab);
-  tranif0 pmos_4(bb, vdd, b);
-  tranif0 pmos_5(ab, vdd, a);
-  tranif0 pmos_6(y, vdd, net_5);
-endmodule   /* muddlib07__xor2_2x */
+  tranif1 nmos_0(net_0, net_1, A);
+  tranif1 nmos_1(gnd, net_0, B);
+  tranif1 nmos_4(net_11, Y, A);
+  tranif1 nmos_5(net_11, Y, B);
+  tranif1 nmos_6(gnd, net_11, net_1);
+  tranif0 pmos_0(net_1, vdd, A);
+  tranif0 pmos_1(net_1, vdd, B);
+  tranif0 pmos_2(Y, vdd, net_1);
+  tranif0 pmos_3(net_28, vdd, B);
+  tranif0 pmos_4(Y, net_28, A);
+endmodule   /* muddlib07__xnor_ds */
 
 module FTC(Cin, I1, I2, I3, I4, C, Cout, S);
   input Cin;
@@ -114,16 +103,14 @@ module FTC(Cin, I1, I2, I3, I4, C, Cout, S);
 
   supply1 vdd;
   supply0 gnd;
-  wire net_2, net_35, net_37, net_4, net_49, net_56;
+  wire net_10, net_13, net_2, net_5, net_9;
 
-  muddlib07__a2o1_1x a2o1_1x_0(.a(net_49), .b(Cin), .c(net_56), .y(C));
-  muddlib07__nand2_1x nand2_1x_0(.a(I1), .b(I2), .y(net_4));
-  muddlib07__nand2_1x nand2_1x_1(.a(I3), .b(I4), .y(net_2));
-  muddlib07__nand2_1x nand2_1x_2(.a(net_4), .b(net_2), .y(Cout));
-  muddlib07__o2a1i_1x o2a1i_1x_0(.a(I4), .b(I3), .c(net_2), .y(net_37));
-  muddlib07__o2a1i_1x o2a1i_1x_1(.a(I2), .b(I1), .c(net_4), .y(net_35));
-  muddlib07__o22a2i_1x o22a2i_1_0(.a(net_2), .b(net_4), .c(net_35), .d(net_37), 
-      .y(net_56));
-  muddlib07__xor2_2x xor2_2x_0(.a(net_37), .b(net_35), .y(net_49));
-  muddlib07__xor2_2x xor2_2x_1(.a(net_49), .b(Cin), .y(S));
+  muddlib07__fulladder fulladde_0(.a(I2), .b(I1), .c(I3), .cout(Cout), 
+      .s(net_2));
+  muddlib07__inv_1x inv_1x_0(.a(net_5), .y(net_9));
+  muddlib07__nand2_1x nand2_1x_0(.a(Cin), .b(I4), .y(net_13));
+  muddlib07__nand2_1x nand2_1x_2(.a(net_2), .b(net_9), .y(net_10));
+  muddlib07__nand2_1x nand2_1x_3(.a(net_10), .b(net_13), .y(C));
+  muddlib07__xnor_ds xnor_ds_0(.A(Cin), .B(I4), .Y(net_5));
+  muddlib07__xnor_ds xnor_ds_1(.A(net_5), .B(net_2), .Y(S));
 endmodule   /* FTC */
