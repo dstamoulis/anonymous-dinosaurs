@@ -1,0 +1,131 @@
+/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv {2 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchFTCfunct
+** Warning: /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv(40): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling module FTC
+
+Top level modules:
+	testbenchFTCfunct
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.v {1 {vlog -work work /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module muddlib07__fulladder
+-- Compiling module muddlib07__inv_1x
+-- Compiling module muddlib07__nand2_1x
+-- Compiling module muddlib07__xnor_ds
+-- Compiling module FTC
+
+Top level modules:
+	FTC
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchPPR
+-- Compiling module muddlib07__fulladder
+-- Compiling module muddlib07__inv_1x
+-- Compiling module muddlib07__nand2_1x
+-- Compiling module muddlib07__xnor_ds
+-- Compiling module wordlib8__FTC
+-- Compiling module PPR
+
+Top level modules:
+	testbenchPPR
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor_ds.v {1 {vlog -work work /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor_ds.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module xnor_ds
+
+Top level modules:
+	xnor_ds
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPRfunct.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPRfunct.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchPPRfunct
+-- Compiling module functPPR
+-- Compiling module FTCfunct
+
+Top level modules:
+	testbenchPPRfunct
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchCPA
+-- Compiling module muddlib07__and2_1x
+-- Compiling module muddlib07__xor2_1x
+-- Compiling module wordlib8__HalfAdder
+-- Compiling module muddlib07__fulladder
+-- Compiling module CPA
+
+Top level modules:
+	testbenchCPA
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPAfunct.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPAfunct.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchCPAfunct
+-- Compiling module functCPA
+-- Compiling module FAfunct
+-- Compiling module HAfunct
+
+Top level modules:
+	testbenchCPAfunct
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv {2 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchFTC
+** Warning: /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv(40): (vlog-2643) Unterminated string literal continues onto next line.
+-- Compiling module muddlib07__fulladder
+-- Compiling module muddlib07__inv_1x
+-- Compiling module muddlib07__nand2_1x
+-- Compiling module muddlib07__xnor_ds
+-- Compiling module FTC
+
+Top level modules:
+	testbenchFTC
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/check.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/check.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchXNOR
+-- Compiling module xnor_ds
+
+Top level modules:
+	testbenchXNOR
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.v {1 {vlog -work work /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module muddlib07__fulladder
+-- Compiling module muddlib07__inv_1x
+-- Compiling module muddlib07__nand2_1x
+-- Compiling module muddlib07__xnor_ds
+-- Compiling module wordlib8__FTC
+-- Compiling module PPR
+
+Top level modules:
+	PPR
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/checkWrite.sv {1 {vlog -work work -sv /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/checkWrite.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbenchCHECK
+-- Compiling module FTC
+
+Top level modules:
+	testbenchCHECK
+
+} {} {}} /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.v {1 {vlog -work work /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module muddlib07__and2_1x
+-- Compiling module muddlib07__xor2_1x
+-- Compiling module wordlib8__HalfAdder
+-- Compiling module muddlib07__fulladder
+-- Compiling module CPA
+
+Top level modules:
+	CPA
+
+} {} {}}

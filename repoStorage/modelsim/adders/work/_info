@@ -1,0 +1,653 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/electric/adders
+vCPA
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 I;?J;IZHU5YN4im0n;:Lh3
+IRlRRAJb2Mik75S<O^8Hk=0
+Z2 VAST>9EoGLHT:6`=TaMl;Q0
+Z3 !s105 CPA_sv_unit
+S1
+Z4 d/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders
+Z5 w1383786566
+Z6 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.sv
+Z7 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.sv
+L0 269
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z9 !s108 1383786631.658649
+Z10 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPA.sv|
+!s101 -O0
+Z12 o-work work -sv -O0
+Z13 n@c@p@a
+vFAfunct
+R1
+Z14 !s100 fOWzU>Rf2dW^@6HSBg_Ci1
+Z15 I0mXdWmJ^JBnLYe@RgNDmI1
+Z16 V?1[IiNoBVJTfH9[iYHbB[0
+Z17 !s105 CPAfunct_sv_unit
+S1
+R4
+R5
+Z18 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPAfunct.sv
+Z19 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPAfunct.sv
+Z20 L0 210
+R8
+r1
+31
+Z21 !s108 1383786631.609535
+Z22 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPAfunct.sv|
+Z23 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/CPAfunct.sv|
+R12
+Z24 n@f@afunct
+!i10b 1
+!s85 0
+!s101 -O0
+vFTC
+R1
+Z25 IQ1H:HJ6YnJDGBJBzAI0?C3
+Z26 V?zgc]<i5fR7BP=`Dc3GRm1
+Z27 !s105 checkWrite_sv_unit
+S1
+R4
+Z28 w1383786583
+Z29 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/checkWrite.sv
+Z30 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/checkWrite.sv
+L0 52
+R8
+r1
+31
+Z31 !s108 1383786631.523418
+Z32 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/checkWrite.sv|
+Z33 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/checkWrite.sv|
+R12
+Z34 n@f@t@c
+Z35 !s100 mdZ5QoE2:aQXS5J;^S<;g3
+!i10b 1
+!s85 0
+!s101 -O0
+vFTCfunct
+R1
+Z36 !s100 7[7NN_JR=GQe`f6?VE^VS3
+Z37 I?dlQP=0[b5EHb@CJMm;z21
+Z38 VdVGjf[TAIk31N[cm71o;D3
+Z39 !s105 PPRfunct_sv_unit
+S1
+R4
+R28
+Z40 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPRfunct.sv
+Z41 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPRfunct.sv
+Z42 L0 205
+R8
+r1
+31
+Z43 !s108 1383786631.473907
+Z44 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPRfunct.sv|
+Z45 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPRfunct.sv|
+R12
+Z46 n@f@t@cfunct
+!i10b 1
+!s85 0
+!s101 -O0
+vfunctCPA
+R1
+Z47 !s100 j9QMUMQG6IXKT5bbOh[j]3
+Z48 IkWS>gRK28@>^leFCAW=WG0
+Z49 VkNoDEZBIngl]HAj8KEga<3
+R17
+S1
+R4
+R5
+R18
+R19
+Z50 L0 129
+R8
+r1
+31
+R21
+R22
+R23
+R12
+Z51 nfunct@c@p@a
+!i10b 1
+!s85 0
+!s101 -O0
+vfunctPPR
+R1
+Z52 !s100 lUQWcKN;zBZ:Nm[hh1acT3
+Z53 Ian<15NenAF`>[kYlf9zYV0
+Z54 V<UFLzBgVTKf[7TWPElc_`0
+R39
+S1
+R4
+R28
+R40
+R41
+Z55 L0 134
+R8
+r1
+31
+R43
+R44
+R45
+R12
+Z56 nfunct@p@p@r
+!i10b 1
+!s85 0
+!s101 -O0
+vHAfunct
+R1
+Z57 !s100 :>a][nUM>oQQVj0:b:JP32
+Z58 In;a=Lk`::T9gnLU7Sn7911
+Z59 VaFN<81ShSF`QnX]MEb6nN2
+R17
+S1
+R4
+R5
+R18
+R19
+Z60 L0 221
+R8
+r1
+31
+R21
+R22
+R23
+R12
+Z61 n@h@afunct
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__a2o1_1x
+Z62 IRNTTL;Xjg0c]679B2cXCj2
+Z63 V<e]:M?dnD@Z;8g0b@K3Sj3
+R4
+Z64 w1383152012
+Z65 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.v
+Z66 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.v
+L0 6
+R8
+r1
+31
+Z67 !s108 1383521447.911721
+Z68 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.v|
+Z69 !s90 -reportprogress|300|-work|work|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.v|
+Z70 o-work work -O0
+Z71 !s100 MjnlO_i^`^P5>zZV7l<T[2
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__and2_1x
+R1
+!i10b 1
+!s100 A4U;_l^oM<zfhf:fTK]g?3
+Io?@iDd_1IXa]3Z9bm2UKK3
+Z72 VVh0A5L3197L6?cJjUZ_ee3
+R3
+S1
+R4
+R5
+R6
+R7
+L0 172
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vmuddlib07__fulladder
+R1
+!i10b 1
+!s100 Vn:`8b]RmfH5e@kbV=F:22
+I48fcl5o>A]RjSK=9f^SkO3
+Z73 V;G>j@EF>;`2B`<OIlb[U;1
+R3
+S1
+R4
+R5
+R6
+R7
+L0 224
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vmuddlib07__inv_1x
+Z74 I]U0486gFaHRADhhgKf@Dj2
+Z75 V>O1BO]8zjLFF8VBe=]7400
+R4
+R28
+Z76 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.v
+Z77 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.v
+L0 48
+R8
+r1
+31
+Z78 !s108 1383786631.432578
+Z79 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.v|
+Z80 !s90 -reportprogress|300|-work|work|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.v|
+R70
+Z81 !s100 U`U1jXLFz9P3MT^azKgNl1
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__nand2_1x
+Z82 Ifa^9k5<50c`=Z]nH][lj=1
+Z83 VRW>]D93LEYH69ak^]_8Zh3
+R4
+R28
+R76
+R77
+L0 58
+R8
+r1
+31
+R78
+R79
+R80
+R70
+Z84 !s100 [S^1P51jeS]63IfS`feZ23
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__o22a2i_1x
+Z85 I]UIGnT6EHmgGK859H4;Gd2
+Z86 Vj_5]DX=D7=Sbk9CS=C>051
+R4
+R64
+R65
+R66
+L0 59
+R8
+r1
+31
+R67
+R68
+R69
+R70
+Z87 !s100 Me6iMzhDDlV1a_:3io8Iz0
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__o2a1i_1x
+Z88 IRfc:ikSCI36LzUfL9:53M2
+Z89 V68T7o9V;BgR4PFPkozY010
+R4
+R64
+R65
+R66
+L0 41
+R8
+r1
+31
+R67
+R68
+R69
+R70
+Z90 !s100 ePNf;32WYX8zo[V<mPPQF3
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__xnor_ds
+Z91 I6_TN2mmRMH1RLDMd0Gd5m2
+Z92 VdLhFmKkQmioXU@CTN@Qn50
+R4
+R28
+R76
+R77
+L0 73
+R8
+r1
+31
+R78
+R79
+R80
+R70
+Z93 !s100 C0Nm<d5eSRdF<2233mB;R1
+!i10b 1
+!s85 0
+!s101 -O0
+vmuddlib07__xor2_1x
+R1
+!i10b 1
+!s100 TY3kNF22_DLeO;:>QnV^R2
+II@<D]jl9_J]i@S2CioKQi0
+Z94 Vj:gm:Bm8Y^EknfNmN[0Im3
+R3
+S1
+R4
+R5
+R6
+R7
+L0 189
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vmuddlib07__xor2_2x
+Z95 IHIU8m:K6]iCoAbjSBojDG2
+Z96 V[@WNSlR5dZLGl3BaaSkTD1
+R4
+R64
+R65
+R66
+L0 80
+R8
+r1
+31
+R67
+R68
+R69
+R70
+Z97 !s100 an__Nk_bC?b=lDMEZgB<N1
+!i10b 1
+!s85 0
+!s101 -O0
+vPPR
+Z98 I<:n[L:Rh8Qg]fO]P2d:g@2
+Z99 V88BfV8I9;4Q275d]1?;;Y0
+R4
+R28
+R76
+R77
+Z100 L0 118
+R8
+r1
+31
+R78
+R79
+R80
+R70
+Z101 n@p@p@r
+Z102 !s100 [SRb1Ch0;WG4;:?W:<@Ll2
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+R1
+Z103 !s100 gEnno`_a7Q9XA5:Qd34NG3
+Z104 Ibg2^7NkO_h6Mh9h3P[<nV3
+Z105 VhGfW:390DM[oDMzegDH9`2
+Z106 !s105 check_sv_unit
+S1
+R4
+R28
+Z107 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/check.sv
+Z108 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/check.sv
+L0 2
+R8
+r1
+31
+Z109 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/check.sv|
+R12
+Z110 !s108 1383786631.134684
+Z111 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/check.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchCHECK
+R1
+Z112 !s100 hdWLmjd:Pz=M0@Gn`AzC?0
+Z113 Ic4b8^V6Q@LHf5C9oA_0lj2
+Z114 V0ID4^a`6j6g82>n3lg23>0
+R27
+S1
+R4
+R28
+R29
+R30
+L0 3
+R8
+r1
+31
+R31
+R32
+R33
+R12
+Z115 ntestbench@c@h@e@c@k
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchCPA
+R1
+!i10b 1
+Z116 !s100 b`SHZ9]`g^XPAn^Zk`HKY2
+Z117 IY[<437Ec8<K8AAlfNGcUX2
+Z118 VFgMmQYS630I2QbJ98AkW?0
+R3
+S1
+R4
+R5
+R6
+R7
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z119 ntestbench@c@p@a
+vtestbenchCPAfunct
+R1
+Z120 !s100 [FJbdSQES2b6bflF:N3W21
+Z121 IO<JT>=9Zz>5^VbThUQ44h3
+Z122 VG]nQ5KA=GafNGVTSANjAG0
+R17
+S1
+R4
+R5
+R18
+R19
+L0 1
+R8
+r1
+31
+R21
+R22
+R23
+R12
+Z123 ntestbench@c@p@afunct
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchFTC
+R1
+Z124 !s100 2<OREgA`zFfzC8TD8gUQ=0
+Z125 IWZ2?lDI]GcA4d`jiXC@gT2
+Z126 VAK7YOOg751mI4E@QdAM3M1
+Z127 !s105 FTC_sv_unit
+S1
+R4
+R28
+Z128 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv
+Z129 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv
+L0 2
+R8
+r1
+31
+Z130 !s108 1383786631.170343
+Z131 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv|
+Z132 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTC.sv|
+R12
+Z133 ntestbench@f@t@c
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchFTCfunct
+R1
+Z134 !s100 fo]NkL:Dj_=BDQn]k`0;20
+Z135 IkKHY@fdA?ZYLF[QT0?zUb3
+Z136 VVf^ODR[gP8`dK?;[GgDkT1
+Z137 !s105 FTCfunct_sv_unit
+S1
+R4
+R28
+Z138 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv
+Z139 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv
+L0 2
+R8
+r1
+31
+Z140 !s108 1383786631.318043
+Z141 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv|
+Z142 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/FTCfunct.sv|
+R12
+Z143 ntestbench@f@t@cfunct
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchPPR
+R1
+Z144 !s100 ;f<`nPVJG[39RVOebhAgo1
+Z145 I4oCgDiJ:O@3:7n][nHzV43
+Z146 Vf<B@7SGczb3giJnEc10SJ2
+Z147 !s105 PPR_sv_unit
+S1
+R4
+R28
+Z148 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.sv
+Z149 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.sv
+L0 3
+R8
+r1
+31
+Z150 !s108 1383786631.261846
+Z151 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.sv|
+Z152 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/PPR.sv|
+R12
+Z153 ntestbench@p@p@r
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchPPRfunct
+R1
+Z154 !s100 ^JBC^?a]aB>k>T2G1g0b]3
+Z155 Ik@0?1jKme:Na=gUJU^0SZ2
+Z156 VRXBQ168JFA;zPXC72Kd2G1
+R39
+S1
+R4
+R28
+R40
+R41
+L0 2
+R8
+r1
+31
+R43
+R44
+R45
+R12
+Z157 ntestbench@p@p@rfunct
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbenchXNOR
+R1
+Z158 !s100 KB_NeCIYJFW8l2nJf`QfB0
+Z159 IOcRN5WcZ;41H@2:nOb=883
+Z160 VJz@^EoY;U6PYJl@WYOJ]g1
+Z161 !s105 xnor_sv_unit
+S1
+R4
+R28
+Z162 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor.sv
+Z163 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor.sv
+L0 1
+R8
+r1
+31
+Z164 !s108 1383786631.357530
+Z165 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor.sv|
+Z166 !s90 -reportprogress|300|-work|work|-sv|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor.sv|
+R12
+Z167 ntestbench@x@n@o@r
+!i10b 1
+!s85 0
+!s101 -O0
+vwordlib8__FTC
+Z168 Iz8bNZo<UKX=_En>lU<9oN1
+Z169 Va9D>Sa7I:Zb_2N`eZa;412
+R4
+R28
+R76
+R77
+L0 94
+R8
+r1
+31
+R78
+R79
+R80
+R70
+Z170 nwordlib8__@f@t@c
+Z171 !s100 W[VP8jcm0mE?1KQn@PRWh1
+!i10b 1
+!s85 0
+!s101 -O0
+vwordlib8__HalfAdder
+R1
+!i10b 1
+!s100 _@B4BbfTRdLXOV4fmeiVj3
+IKklFMAc@VALQFWkYC@Ah52
+Z172 VTMYWzP:29jgSZ91_3NWIT2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 212
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z173 nwordlib8__@half@adder
+vxnor_ds
+Z174 IdnhRI00[M:6lZ4MoHAWj@2
+Z175 V?YoDzQz6d9kN4^1G6;`k71
+R4
+R28
+Z176 8/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor_ds.v
+Z177 F/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor_ds.v
+L0 6
+R8
+r1
+31
+R70
+Z178 !s100 iZL41IPa07bDVRQfXIo[C3
+Z179 !s108 1383786631.396162
+Z180 !s107 /home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor_ds.v|
+Z181 !s90 -reportprogress|300|-work|work|/home/stam/mcgill/Fall13/IntroVLSI/gitRepo/anonymous-dinosaurs/modelsim/adders/xnor_ds.v|
+!i10b 1
+!s85 0
+!s101 -O0

@@ -1,0 +1,47 @@
+library verilog;
+use verilog.vl_types.all;
+entity CPA is
+    port(
+        a0              : in     vl_logic;
+        a1              : in     vl_logic;
+        a10             : in     vl_logic;
+        a11             : in     vl_logic;
+        a12             : in     vl_logic;
+        a2              : in     vl_logic;
+        a3              : in     vl_logic;
+        a4              : in     vl_logic;
+        a5              : in     vl_logic;
+        a6              : in     vl_logic;
+        a7              : in     vl_logic;
+        a8              : in     vl_logic;
+        a9              : in     vl_logic;
+        b0              : in     vl_logic;
+        b1              : in     vl_logic;
+        b10             : in     vl_logic;
+        b11             : in     vl_logic;
+        b12             : in     vl_logic;
+        b2              : in     vl_logic;
+        b3              : in     vl_logic;
+        b4              : in     vl_logic;
+        b5              : in     vl_logic;
+        b6              : in     vl_logic;
+        b7              : in     vl_logic;
+        b8              : in     vl_logic;
+        b9              : in     vl_logic;
+        cout            : out    vl_logic;
+        overflow        : out    vl_logic;
+        s0              : out    vl_logic;
+        s1              : out    vl_logic;
+        s10             : out    vl_logic;
+        s11             : out    vl_logic;
+        s12             : out    vl_logic;
+        s2              : out    vl_logic;
+        s3              : out    vl_logic;
+        s4              : out    vl_logic;
+        s5              : out    vl_logic;
+        s6              : out    vl_logic;
+        s7              : out    vl_logic;
+        s8              : out    vl_logic;
+        s9              : out    vl_logic
+    );
+end CPA;
