@@ -1,0 +1,610 @@
+*** SPICE deck for cell PPR{lay} from library wordlib8
+*** Created on Thu Nov 14, 2013 19:20:33
+*** Last revised on Fri Nov 15, 2013 11:50:12
+*** Written on Fri Nov 15, 2013 12:06:22 by Electric VLSI Design System, 
+*version 8.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    
+*Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+.OPTIONS NOMOD NOPAGE
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.OPTIONS NOMOD DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P LIMPTS=1000
++ITL5=0 RELTOL=0.01 ABSTOL=500PA VNTOL=500UV LVLTIM=2
++LVLCOD=1
+.MODEL N NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++LD=0.4E-6 TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2MF/M^2
+.MODEL P PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
+.MODEL DIFFCAP D CJO=.2MF/M^2
+
+*** CELL: muddlib07:fulladder{lay}
+.SUBCKT fulladder a b c cout gnd s vdd
+Mnmos@0 cout coutb#7nmos@0_n-trans-poly-right gnd gnd N L=0.6U W=2.4U 
++AS=4.88P AD=5.4P PS=13.133U PD=10.2U
+Mnmos@1 s sumb#6nmos@1_n-trans-poly-right gnd gnd N L=0.6U W=2.4U AS=4.88P 
++AD=5.4P PS=13.133U PD=10.2U
+Mnmos@2 gnd a#4nmos@2_n-trans-poly-right net@124 gnd N L=0.6U W=2.4U AS=2.16P 
++AD=4.88P PS=4.2U PD=13.133U
+Mnmos@3 net@124 b#5nmos@3_n-trans-poly-right net@122 gnd N L=0.6U W=2.4U 
++AS=2.16P AD=2.16P PS=4.2U PD=4.2U
+Mnmos@4 net@122 c#5nmos@4_n-trans-poly-right sumb gnd N L=0.6U W=2.4U 
++AS=3.24P AD=2.16P PS=5.4U PD=4.2U
+Mnmos@5 sumb coutb#11nmos@5_n-trans-poly-right net@123 gnd N L=0.6U W=2.4U 
++AS=2.16P AD=3.24P PS=4.2U PD=5.4U
+Mnmos@6 net@123 c#9nmos@6_n-trans-poly-right gnd gnd N L=0.6U W=2.4U AS=4.88P 
++AD=2.16P PS=13.133U PD=4.2U
+Mnmos@7 gnd b#9nmos@7_n-trans-poly-right net@123 gnd N L=0.6U W=2.4U AS=2.16P 
++AD=4.88P PS=4.2U PD=13.133U
+Mnmos@8 net@123 a#10nmos@8_n-trans-poly-right gnd gnd N L=0.6U W=2.4U 
++AS=4.88P AD=2.16P PS=13.133U PD=4.2U
+Mnmos@9 gnd a#14nmos@9_n-trans-poly-right net@134 gnd N L=0.6U W=2.4U 
++AS=2.16P AD=4.88P PS=4.2U PD=13.133U
+Mnmos@10 net@134 b#13nmos@10_n-trans-poly-right coutb gnd N L=0.6U W=2.4U 
++AS=3.24P AD=2.16P PS=5.4U PD=4.2U
+Mnmos@11 coutb c#12nmos@11_n-trans-poly-right net@135 gnd N L=0.6U W=2.4U 
++AS=2.64P AD=3.24P PS=5.4U PD=5.4U
+Mnmos@12 net@135 b#17nmos@12_n-trans-poly-right gnd gnd N L=0.6U W=2.4U 
++AS=4.88P AD=2.64P PS=13.133U PD=5.4U
+Mnmos@13 gnd a#17nmos@13_n-trans-poly-right net@135 gnd N L=0.6U W=2.4U 
++AS=2.64P AD=4.88P PS=5.4U PD=13.133U
+Mpmos@0 cout coutb#6pmos@0_p-trans-poly-left vdd vdd P L=0.6U W=4.8U AS=7.2P 
++AD=5.4P PS=15.8U PD=10.2U
+Mpmos@1 s sumb#5pmos@1_p-trans-poly-left vdd vdd P L=0.6U W=4.8U AS=7.2P 
++AD=5.4P PS=15.8U PD=10.2U
+Mpmos@2 vdd a#3pmos@2_p-trans-poly-left net@10 vdd P L=0.6U W=4.8U AS=4.32P 
++AD=7.2P PS=6.6U PD=15.8U
+Mpmos@3 net@10 b#4pmos@3_p-trans-poly-left net@11 vdd P L=0.6U W=4.8U 
++AS=4.32P AD=4.32P PS=6.6U PD=6.6U
+Mpmos@4 net@11 c#4pmos@4_p-trans-poly-left sumb vdd P L=0.6U W=4.8U AS=3.24P 
++AD=4.32P PS=5.4U PD=6.6U
+Mpmos@5 sumb coutb#10pmos@5_p-trans-poly-left net@27 vdd P L=0.6U W=4.8U 
++AS=4.32P AD=3.24P PS=6.6U PD=5.4U
+Mpmos@6 net@27 c#8pmos@6_p-trans-poly-left vdd vdd P L=0.6U W=4.8U AS=7.2P 
++AD=4.32P PS=15.8U PD=6.6U
+Mpmos@7 vdd b#10pmos@7_p-trans-poly-left net@27 vdd P L=0.6U W=4.8U AS=4.32P 
++AD=7.2P PS=6.6U PD=15.8U
+Mpmos@8 net@27 a#9pmos@8_p-trans-poly-left vdd vdd P L=0.6U W=4.8U AS=7.2P 
++AD=4.32P PS=15.8U PD=6.6U
+Mpmos@9 vdd a#13pmos@9_p-trans-poly-left net@13 vdd P L=0.6U W=4.8U AS=4.32P 
++AD=7.2P PS=6.6U PD=15.8U
+Mpmos@10 net@13 b#11pmos@10_p-trans-poly-left coutb vdd P L=0.6U W=4.8U 
++AS=3.24P AD=4.32P PS=5.4U PD=6.6U
+Mpmos@11 coutb c#11pmos@11_p-trans-poly-left net@30 vdd P L=0.6U W=4.8U 
++AS=5.28P AD=3.24P PS=8.6U PD=5.4U
+Mpmos@12 net@30 b#16pmos@12_p-trans-poly-left vdd vdd P L=0.6U W=4.8U AS=7.2P 
++AD=5.28P PS=15.8U PD=8.6U
+Mpmos@13 vdd a#16pmos@13_p-trans-poly-left net@30 vdd P L=0.6U W=4.8U 
++AS=5.28P AD=7.2P PS=8.6U PD=15.8U
+** Extracted Parasitic Capacitors ***
+C0 c 0 7.67fF
+C1 b 0 9.84fF
+C2 cout 0 16.42fF
+C3 s 0 4.71fF
+C4 coutb 0 15.76fF
+C5 a 0 11.56fF
+C6 sumb 0 8.23fF
+C7 net@27 0 2.41fF
+C8 net@30 0 2.41fF
+C9 net@123 0 3.73fF
+C10 net@135 0 3.73fF
+C11 coutb#7nmos@0_n-trans-poly-right 0 0.13fF
+C12 b#13nmos@10_n-trans-poly-right 0 0.16fF
+C13 c#12nmos@11_n-trans-poly-right 0 0.18fF
+C14 b#17nmos@12_n-trans-poly-right 0 0.17fF
+C15 a#17nmos@13_n-trans-poly-right 0 0.15fF
+C16 a#4nmos@2_n-trans-poly-right 0 0.15fF
+C17 b#5nmos@3_n-trans-poly-right 0 0.17fF
+C18 c#5nmos@4_n-trans-poly-right 0 0.18fF
+C19 coutb#11nmos@5_n-trans-poly-right 0 0.13fF
+C20 c#9nmos@6_n-trans-poly-right 0 0.18fF
+C21 b#9nmos@7_n-trans-poly-right 0 0.17fF
+C22 a#10nmos@8_n-trans-poly-right 0 0.15fF
+C23 a#14nmos@9_n-trans-poly-right 0 0.15fF
+C24 coutb#6pmos@0_p-trans-poly-left 0 0.17fF
+C25 sumb#5pmos@1_p-trans-poly-left 0 0.18fF
+C26 b#11pmos@10_p-trans-poly-left 0 0.16fF
+C27 c#11pmos@11_p-trans-poly-left 0 0.15fF
+C28 b#16pmos@12_p-trans-poly-left 0 0.17fF
+C29 a#16pmos@13_p-trans-poly-left 0 0.18fF
+C30 a#3pmos@2_p-trans-poly-left 0 0.18fF
+C31 b#4pmos@3_p-trans-poly-left 0 0.17fF
+C32 c#4pmos@4_p-trans-poly-left 0 0.15fF
+C33 coutb#10pmos@5_p-trans-poly-left 0 0.17fF
+C34 c#8pmos@6_p-trans-poly-left 0 0.15fF
+C35 b#10pmos@7_p-trans-poly-left 0 0.17fF
+C36 a#9pmos@8_p-trans-poly-left 0 0.18fF
+C37 a#13pmos@9_p-trans-poly-left 0 0.18fF
+** Extracted Parasitic Resistors ***
+R0 sumb#5pmos@1_p-trans-poly-left sumb#5pmos@1_p-trans-poly-left##0 9.521
+C38 sumb#5pmos@1_p-trans-poly-left##0 0 0.18fF
+R1 sumb#5pmos@1_p-trans-poly-left##0 sumb#5pmos@1_p-trans-poly-left##1 9.521
+C39 sumb#5pmos@1_p-trans-poly-left##1 0 0.18fF
+R2 sumb#5pmos@1_p-trans-poly-left##1 sumb#5pmos@1_p-trans-poly-left##2 9.521
+C40 sumb#5pmos@1_p-trans-poly-left##2 0 0.18fF
+R3 sumb#5pmos@1_p-trans-poly-left##2 sumb#5pmos@1_p-trans-poly-left##3 9.521
+C41 sumb#5pmos@1_p-trans-poly-left##3 0 0.18fF
+R4 sumb#5pmos@1_p-trans-poly-left##3 sumb#5pmos@1_p-trans-poly-left##4 9.521
+C42 sumb#5pmos@1_p-trans-poly-left##4 0 0.18fF
+R5 sumb#5pmos@1_p-trans-poly-left##4 sumb#5pmos@1_p-trans-poly-left##5 9.521
+C43 sumb#5pmos@1_p-trans-poly-left##5 0 0.18fF
+R6 sumb#5pmos@1_p-trans-poly-left##5 sumb#5pmos@1_p-trans-poly-left##6 9.521
+C44 sumb#5pmos@1_p-trans-poly-left##6 0 0.18fF
+R7 sumb#5pmos@1_p-trans-poly-left##6 sumb#5pmos@1_p-trans-poly-left##7 9.521
+C45 sumb#5pmos@1_p-trans-poly-left##7 0 0.18fF
+R8 sumb#5pmos@1_p-trans-poly-left##7 sumb#5pmos@1_p-trans-poly-left##8 9.521
+C46 sumb#5pmos@1_p-trans-poly-left##8 0 0.18fF
+R9 sumb#5pmos@1_p-trans-poly-left##8 sumb#5pmos@1_p-trans-poly-left##9 9.521
+C47 sumb#5pmos@1_p-trans-poly-left##9 0 0.18fF
+R10 sumb#5pmos@1_p-trans-poly-left##9 sumb#5pmos@1_p-trans-poly-left##10 
++9.521
+C48 sumb#5pmos@1_p-trans-poly-left##10 0 0.18fF
+R11 sumb#5pmos@1_p-trans-poly-left##10 sumb#5pmos@1_p-trans-poly-left##11 
++9.521
+C49 sumb#5pmos@1_p-trans-poly-left##11 0 0.18fF
+R12 sumb#5pmos@1_p-trans-poly-left##11 sumb#5pmos@1_p-trans-poly-left##12 
++9.521
+C50 sumb#5pmos@1_p-trans-poly-left##12 0 0.18fF
+R13 sumb#5pmos@1_p-trans-poly-left##12 sumb 9.521
+R14 sumb sumb#6nmos@1_n-trans-poly-right 9.3
+R15 coutb#6pmos@0_p-trans-poly-left coutb#6pmos@0_p-trans-poly-left##0 9.3
+C51 coutb#6pmos@0_p-trans-poly-left##0 0 0.17fF
+R16 coutb#6pmos@0_p-trans-poly-left##0 coutb#6pmos@0_p-trans-poly-left##1 9.3
+C52 coutb#6pmos@0_p-trans-poly-left##1 0 0.17fF
+R17 coutb#6pmos@0_p-trans-poly-left##1 coutb#6pmos@0_p-trans-poly-left##2 9.3
+C53 coutb#6pmos@0_p-trans-poly-left##2 0 0.17fF
+R18 coutb#6pmos@0_p-trans-poly-left##2 coutb#6pmos@0_p-trans-poly-left##3 9.3
+C54 coutb#6pmos@0_p-trans-poly-left##3 0 0.17fF
+R19 coutb#6pmos@0_p-trans-poly-left##3 coutb#6pmos@0_p-trans-poly-left##4 9.3
+C55 coutb#6pmos@0_p-trans-poly-left##4 0 0.17fF
+R20 coutb#6pmos@0_p-trans-poly-left##4 coutb#6pmos@0_p-trans-poly-left##5 9.3
+C56 coutb#6pmos@0_p-trans-poly-left##5 0 0.17fF
+R21 coutb#6pmos@0_p-trans-poly-left##5 coutb#6pmos@0_p-trans-poly-left##6 9.3
+C57 coutb#6pmos@0_p-trans-poly-left##6 0 0.17fF
+R22 coutb#6pmos@0_p-trans-poly-left##6 coutb#6pmos@0_p-trans-poly-left##7 9.3
+C58 coutb#6pmos@0_p-trans-poly-left##7 0 0.17fF
+R23 coutb#6pmos@0_p-trans-poly-left##7 coutb#6pmos@0_p-trans-poly-left##8 9.3
+C59 coutb#6pmos@0_p-trans-poly-left##8 0 0.17fF
+R24 coutb#6pmos@0_p-trans-poly-left##8 coutb#6pmos@0_p-trans-poly-left##9 9.3
+C60 coutb#6pmos@0_p-trans-poly-left##9 0 0.17fF
+R25 coutb#6pmos@0_p-trans-poly-left##9 coutb#6pmos@0_p-trans-poly-left##10 
++9.3
+C61 coutb#6pmos@0_p-trans-poly-left##10 0 0.17fF
+R26 coutb#6pmos@0_p-trans-poly-left##10 coutb 9.3
+R27 coutb coutb##0 7.75
+C62 coutb##0 0 0.13fF
+R28 coutb##0 coutb##1 7.75
+C63 coutb##1 0 0.13fF
+R29 coutb##1 coutb##2 7.75
+C64 coutb##2 0 0.13fF
+R30 coutb##2 coutb#7nmos@0_n-trans-poly-right 7.75
+R31 a#3pmos@2_p-trans-poly-left a#3pmos@2_p-trans-poly-left##0 9.989
+C65 a#3pmos@2_p-trans-poly-left##0 0 0.18fF
+R32 a#3pmos@2_p-trans-poly-left##0 a#3pmos@2_p-trans-poly-left##1 9.989
+C66 a#3pmos@2_p-trans-poly-left##1 0 0.18fF
+R33 a#3pmos@2_p-trans-poly-left##1 a#3pmos@2_p-trans-poly-left##2 9.989
+C67 a#3pmos@2_p-trans-poly-left##2 0 0.18fF
+R34 a#3pmos@2_p-trans-poly-left##2 a#3pmos@2_p-trans-poly-left##3 9.989
+C68 a#3pmos@2_p-trans-poly-left##3 0 0.18fF
+R35 a#3pmos@2_p-trans-poly-left##3 a#3pmos@2_p-trans-poly-left##4 9.989
+C69 a#3pmos@2_p-trans-poly-left##4 0 0.18fF
+R36 a#3pmos@2_p-trans-poly-left##4 a#3pmos@2_p-trans-poly-left##5 9.989
+C70 a#3pmos@2_p-trans-poly-left##5 0 0.18fF
+R37 a#3pmos@2_p-trans-poly-left##5 a#3pmos@2_p-trans-poly-left##6 9.989
+C71 a#3pmos@2_p-trans-poly-left##6 0 0.18fF
+R38 a#3pmos@2_p-trans-poly-left##6 a#3pmos@2_p-trans-poly-left##7 9.989
+C72 a#3pmos@2_p-trans-poly-left##7 0 0.18fF
+R39 a#3pmos@2_p-trans-poly-left##7 a 9.989
+R40 a a##0 8.783
+C73 a##0 0 0.15fF
+R41 a##0 a##1 8.783
+C74 a##1 0 0.15fF
+R42 a##1 a##2 8.783
+C75 a##2 0 0.15fF
+R43 a##2 a##3 8.783
+C76 a##3 0 0.15fF
+R44 a##3 a##4 8.783
+C77 a##4 0 0.15fF
+R45 a##4 a#4nmos@2_n-trans-poly-right 8.783
+R46 b#4pmos@3_p-trans-poly-left b#4pmos@3_p-trans-poly-left##0 9.743
+C78 b#4pmos@3_p-trans-poly-left##0 0 0.17fF
+R47 b#4pmos@3_p-trans-poly-left##0 b#4pmos@3_p-trans-poly-left##1 9.743
+C79 b#4pmos@3_p-trans-poly-left##1 0 0.17fF
+R48 b#4pmos@3_p-trans-poly-left##1 b#4pmos@3_p-trans-poly-left##2 9.743
+C80 b#4pmos@3_p-trans-poly-left##2 0 0.17fF
+R49 b#4pmos@3_p-trans-poly-left##2 b#4pmos@3_p-trans-poly-left##3 9.743
+C81 b#4pmos@3_p-trans-poly-left##3 0 0.17fF
+R50 b#4pmos@3_p-trans-poly-left##3 b#4pmos@3_p-trans-poly-left##4 9.743
+C82 b#4pmos@3_p-trans-poly-left##4 0 0.17fF
+R51 b#4pmos@3_p-trans-poly-left##4 b#4pmos@3_p-trans-poly-left##5 9.743
+C83 b#4pmos@3_p-trans-poly-left##5 0 0.17fF
+R52 b#4pmos@3_p-trans-poly-left##5 b 9.743
+R53 b b##0 9.3
+C84 b##0 0 0.17fF
+R54 b##0 b##1 9.3
+C85 b##1 0 0.17fF
+R55 b##1 b##2 9.3
+C86 b##2 0 0.17fF
+R56 b##2 b##3 9.3
+C87 b##3 0 0.17fF
+R57 b##3 b##4 9.3
+C88 b##4 0 0.17fF
+R58 b##4 b##5 9.3
+C89 b##5 0 0.17fF
+R59 b##5 b##6 9.3
+C90 b##6 0 0.17fF
+R60 b##6 b#5nmos@3_n-trans-poly-right 9.3
+R61 c#4pmos@4_p-trans-poly-left c#4pmos@4_p-trans-poly-left##0 8.68
+C91 c#4pmos@4_p-trans-poly-left##0 0 0.15fF
+R62 c#4pmos@4_p-trans-poly-left##0 c#4pmos@4_p-trans-poly-left##1 8.68
+C92 c#4pmos@4_p-trans-poly-left##1 0 0.15fF
+R63 c#4pmos@4_p-trans-poly-left##1 c#4pmos@4_p-trans-poly-left##2 8.68
+C93 c#4pmos@4_p-trans-poly-left##2 0 0.15fF
+R64 c#4pmos@4_p-trans-poly-left##2 c#4pmos@4_p-trans-poly-left##3 8.68
+C94 c#4pmos@4_p-trans-poly-left##3 0 0.15fF
+R65 c#4pmos@4_p-trans-poly-left##3 c 8.68
+R66 c c##0 9.92
+C95 c##0 0 0.18fF
+R67 c##0 c##1 9.92
+C96 c##1 0 0.18fF
+R68 c##1 c##2 9.92
+C97 c##2 0 0.18fF
+R69 c##2 c##3 9.92
+C98 c##3 0 0.18fF
+R70 c##3 c##4 9.92
+C99 c##4 0 0.18fF
+R71 c##4 c##5 9.92
+C100 c##5 0 0.18fF
+R72 c##5 c##6 9.92
+C101 c##6 0 0.18fF
+R73 c##6 c##7 9.92
+C102 c##7 0 0.18fF
+R74 c##7 c##8 9.92
+C103 c##8 0 0.18fF
+R75 c##8 c#5nmos@4_n-trans-poly-right 9.92
+R76 coutb#10pmos@5_p-trans-poly-left coutb#10pmos@5_p-trans-poly-left##0 9.3
+C104 coutb#10pmos@5_p-trans-poly-left##0 0 0.17fF
+R77 coutb#10pmos@5_p-trans-poly-left##0 coutb#10pmos@5_p-trans-poly-left##1 
++9.3
+C105 coutb#10pmos@5_p-trans-poly-left##1 0 0.17fF
+R78 coutb#10pmos@5_p-trans-poly-left##1 coutb#10pmos@5_p-trans-poly-left##2 
++9.3
+C106 coutb#10pmos@5_p-trans-poly-left##2 0 0.17fF
+R79 coutb#10pmos@5_p-trans-poly-left##2 coutb#10pmos@5_p-trans-poly-left##3 
++9.3
+C107 coutb#10pmos@5_p-trans-poly-left##3 0 0.17fF
+R80 coutb#10pmos@5_p-trans-poly-left##3 coutb#10pmos@5_p-trans-poly-left##4 
++9.3
+C108 coutb#10pmos@5_p-trans-poly-left##4 0 0.17fF
+R81 coutb#10pmos@5_p-trans-poly-left##4 coutb#10pmos@5_p-trans-poly-left##5 
++9.3
+C109 coutb#10pmos@5_p-trans-poly-left##5 0 0.17fF
+R82 coutb#10pmos@5_p-trans-poly-left##5 coutb#10pmos@5_p-trans-poly-left##6 
++9.3
+C110 coutb#10pmos@5_p-trans-poly-left##6 0 0.17fF
+R83 coutb#10pmos@5_p-trans-poly-left##6 coutb#10pmos@5_p-trans-poly-left##7 
++9.3
+C111 coutb#10pmos@5_p-trans-poly-left##7 0 0.17fF
+R84 coutb#10pmos@5_p-trans-poly-left##7 coutb#10pmos@5_p-trans-poly-left##8 
++9.3
+C112 coutb#10pmos@5_p-trans-poly-left##8 0 0.17fF
+R85 coutb#10pmos@5_p-trans-poly-left##8 coutb#10pmos@5_p-trans-poly-left##9 
++9.3
+C113 coutb#10pmos@5_p-trans-poly-left##9 0 0.17fF
+R86 coutb#10pmos@5_p-trans-poly-left##9 coutb#10pmos@5_p-trans-poly-left##10 
++9.3
+C114 coutb#10pmos@5_p-trans-poly-left##10 0 0.17fF
+R87 coutb#10pmos@5_p-trans-poly-left##10 coutb 9.3
+R88 coutb coutb##0 7.75
+C115 coutb##0 0 0.13fF
+R89 coutb##0 coutb##1 7.75
+C116 coutb##1 0 0.13fF
+R90 coutb##1 coutb##2 7.75
+C117 coutb##2 0 0.13fF
+R91 coutb##2 coutb#11nmos@5_n-trans-poly-right 7.75
+R92 c#8pmos@6_p-trans-poly-left c#8pmos@6_p-trans-poly-left##0 8.68
+C118 c#8pmos@6_p-trans-poly-left##0 0 0.15fF
+R93 c#8pmos@6_p-trans-poly-left##0 c#8pmos@6_p-trans-poly-left##1 8.68
+C119 c#8pmos@6_p-trans-poly-left##1 0 0.15fF
+R94 c#8pmos@6_p-trans-poly-left##1 c#8pmos@6_p-trans-poly-left##2 8.68
+C120 c#8pmos@6_p-trans-poly-left##2 0 0.15fF
+R95 c#8pmos@6_p-trans-poly-left##2 c#8pmos@6_p-trans-poly-left##3 8.68
+C121 c#8pmos@6_p-trans-poly-left##3 0 0.15fF
+R96 c#8pmos@6_p-trans-poly-left##3 c 8.68
+R97 c c##0 9.92
+C122 c##0 0 0.18fF
+R98 c##0 c##1 9.92
+C123 c##1 0 0.18fF
+R99 c##1 c##2 9.92
+C124 c##2 0 0.18fF
+R100 c##2 c##3 9.92
+C125 c##3 0 0.18fF
+R101 c##3 c##4 9.92
+C126 c##4 0 0.18fF
+R102 c##4 c##5 9.92
+C127 c##5 0 0.18fF
+R103 c##5 c##6 9.92
+C128 c##6 0 0.18fF
+R104 c##6 c##7 9.92
+C129 c##7 0 0.18fF
+R105 c##7 c##8 9.92
+C130 c##8 0 0.18fF
+R106 c##8 c#9nmos@6_n-trans-poly-right 9.92
+R107 b#9nmos@7_n-trans-poly-right b#9nmos@7_n-trans-poly-right##0 9.3
+C131 b#9nmos@7_n-trans-poly-right##0 0 0.17fF
+R108 b#9nmos@7_n-trans-poly-right##0 b#9nmos@7_n-trans-poly-right##1 9.3
+C132 b#9nmos@7_n-trans-poly-right##1 0 0.17fF
+R109 b#9nmos@7_n-trans-poly-right##1 b#9nmos@7_n-trans-poly-right##2 9.3
+C133 b#9nmos@7_n-trans-poly-right##2 0 0.17fF
+R110 b#9nmos@7_n-trans-poly-right##2 b#9nmos@7_n-trans-poly-right##3 9.3
+C134 b#9nmos@7_n-trans-poly-right##3 0 0.17fF
+R111 b#9nmos@7_n-trans-poly-right##3 b#9nmos@7_n-trans-poly-right##4 9.3
+C135 b#9nmos@7_n-trans-poly-right##4 0 0.17fF
+R112 b#9nmos@7_n-trans-poly-right##4 b#9nmos@7_n-trans-poly-right##5 9.3
+C136 b#9nmos@7_n-trans-poly-right##5 0 0.17fF
+R113 b#9nmos@7_n-trans-poly-right##5 b#9nmos@7_n-trans-poly-right##6 9.3
+C137 b#9nmos@7_n-trans-poly-right##6 0 0.17fF
+R114 b#9nmos@7_n-trans-poly-right##6 b 9.3
+R115 b b##0 9.743
+C138 b##0 0 0.17fF
+R116 b##0 b##1 9.743
+C139 b##1 0 0.17fF
+R117 b##1 b##2 9.743
+C140 b##2 0 0.17fF
+R118 b##2 b##3 9.743
+C141 b##3 0 0.17fF
+R119 b##3 b##4 9.743
+C142 b##4 0 0.17fF
+R120 b##4 b##5 9.743
+C143 b##5 0 0.17fF
+R121 b##5 b#10pmos@7_p-trans-poly-left 9.743
+R122 a#9pmos@8_p-trans-poly-left a#9pmos@8_p-trans-poly-left##0 9.989
+C144 a#9pmos@8_p-trans-poly-left##0 0 0.18fF
+R123 a#9pmos@8_p-trans-poly-left##0 a#9pmos@8_p-trans-poly-left##1 9.989
+C145 a#9pmos@8_p-trans-poly-left##1 0 0.18fF
+R124 a#9pmos@8_p-trans-poly-left##1 a#9pmos@8_p-trans-poly-left##2 9.989
+C146 a#9pmos@8_p-trans-poly-left##2 0 0.18fF
+R125 a#9pmos@8_p-trans-poly-left##2 a#9pmos@8_p-trans-poly-left##3 9.989
+C147 a#9pmos@8_p-trans-poly-left##3 0 0.18fF
+R126 a#9pmos@8_p-trans-poly-left##3 a#9pmos@8_p-trans-poly-left##4 9.989
+C148 a#9pmos@8_p-trans-poly-left##4 0 0.18fF
+R127 a#9pmos@8_p-trans-poly-left##4 a#9pmos@8_p-trans-poly-left##5 9.989
+C149 a#9pmos@8_p-trans-poly-left##5 0 0.18fF
+R128 a#9pmos@8_p-trans-poly-left##5 a#9pmos@8_p-trans-poly-left##6 9.989
+C150 a#9pmos@8_p-trans-poly-left##6 0 0.18fF
+R129 a#9pmos@8_p-trans-poly-left##6 a#9pmos@8_p-trans-poly-left##7 9.989
+C151 a#9pmos@8_p-trans-poly-left##7 0 0.18fF
+R130 a#9pmos@8_p-trans-poly-left##7 a 9.989
+R131 a a##0 8.783
+C152 a##0 0 0.15fF
+R132 a##0 a##1 8.783
+C153 a##1 0 0.15fF
+R133 a##1 a##2 8.783
+C154 a##2 0 0.15fF
+R134 a##2 a##3 8.783
+C155 a##3 0 0.15fF
+R135 a##3 a##4 8.783
+C156 a##4 0 0.15fF
+R136 a##4 a#10nmos@8_n-trans-poly-right 8.783
+R137 a#13pmos@9_p-trans-poly-left a#13pmos@9_p-trans-poly-left##0 9.989
+C157 a#13pmos@9_p-trans-poly-left##0 0 0.18fF
+R138 a#13pmos@9_p-trans-poly-left##0 a#13pmos@9_p-trans-poly-left##1 9.989
+C158 a#13pmos@9_p-trans-poly-left##1 0 0.18fF
+R139 a#13pmos@9_p-trans-poly-left##1 a#13pmos@9_p-trans-poly-left##2 9.989
+C159 a#13pmos@9_p-trans-poly-left##2 0 0.18fF
+R140 a#13pmos@9_p-trans-poly-left##2 a#13pmos@9_p-trans-poly-left##3 9.989
+C160 a#13pmos@9_p-trans-poly-left##3 0 0.18fF
+R141 a#13pmos@9_p-trans-poly-left##3 a#13pmos@9_p-trans-poly-left##4 9.989
+C161 a#13pmos@9_p-trans-poly-left##4 0 0.18fF
+R142 a#13pmos@9_p-trans-poly-left##4 a#13pmos@9_p-trans-poly-left##5 9.989
+C162 a#13pmos@9_p-trans-poly-left##5 0 0.18fF
+R143 a#13pmos@9_p-trans-poly-left##5 a#13pmos@9_p-trans-poly-left##6 9.989
+C163 a#13pmos@9_p-trans-poly-left##6 0 0.18fF
+R144 a#13pmos@9_p-trans-poly-left##6 a#13pmos@9_p-trans-poly-left##7 9.989
+C164 a#13pmos@9_p-trans-poly-left##7 0 0.18fF
+R145 a#13pmos@9_p-trans-poly-left##7 a 9.989
+R146 a a##0 8.783
+C165 a##0 0 0.15fF
+R147 a##0 a##1 8.783
+C166 a##1 0 0.15fF
+R148 a##1 a##2 8.783
+C167 a##2 0 0.15fF
+R149 a##2 a##3 8.783
+C168 a##3 0 0.15fF
+R150 a##3 a##4 8.783
+C169 a##4 0 0.15fF
+R151 a##4 a#14nmos@9_n-trans-poly-right 8.783
+R152 b#11pmos@10_p-trans-poly-left b#11pmos@10_p-trans-poly-left##0 8.913
+C170 b#11pmos@10_p-trans-poly-left##0 0 0.16fF
+R153 b#11pmos@10_p-trans-poly-left##0 b#11pmos@10_p-trans-poly-left##1 8.913
+C171 b#11pmos@10_p-trans-poly-left##1 0 0.16fF
+R154 b#11pmos@10_p-trans-poly-left##1 b#11pmos@10_p-trans-poly-left##2 8.913
+C172 b#11pmos@10_p-trans-poly-left##2 0 0.16fF
+R155 b#11pmos@10_p-trans-poly-left##2 b#11pmos@10_p-trans-poly-left##3 8.913
+C173 b#11pmos@10_p-trans-poly-left##3 0 0.16fF
+R156 b#11pmos@10_p-trans-poly-left##3 b#11pmos@10_p-trans-poly-left##4 8.913
+C174 b#11pmos@10_p-trans-poly-left##4 0 0.16fF
+R157 b#11pmos@10_p-trans-poly-left##4 b#11pmos@10_p-trans-poly-left##5 8.913
+C175 b#11pmos@10_p-trans-poly-left##5 0 0.16fF
+R158 b#11pmos@10_p-trans-poly-left##5 b#11pmos@10_p-trans-poly-left##6 8.913
+C176 b#11pmos@10_p-trans-poly-left##6 0 0.16fF
+R159 b#11pmos@10_p-trans-poly-left##6 b 8.913
+R160 b b##0 8.913
+C177 b##0 0 0.16fF
+R161 b##0 b##1 8.913
+C178 b##1 0 0.16fF
+R162 b##1 b##2 8.913
+C179 b##2 0 0.16fF
+R163 b##2 b##3 8.913
+C180 b##3 0 0.16fF
+R164 b##3 b##4 8.913
+C181 b##4 0 0.16fF
+R165 b##4 b##5 8.913
+C182 b##5 0 0.16fF
+R166 b##5 b##6 8.913
+C183 b##6 0 0.16fF
+R167 b##6 b#13nmos@10_n-trans-poly-right 8.913
+R168 c#11pmos@11_p-trans-poly-left c#11pmos@11_p-trans-poly-left##0 8.68
+C184 c#11pmos@11_p-trans-poly-left##0 0 0.15fF
+R169 c#11pmos@11_p-trans-poly-left##0 c#11pmos@11_p-trans-poly-left##1 8.68
+C185 c#11pmos@11_p-trans-poly-left##1 0 0.15fF
+R170 c#11pmos@11_p-trans-poly-left##1 c#11pmos@11_p-trans-poly-left##2 8.68
+C186 c#11pmos@11_p-trans-poly-left##2 0 0.15fF
+R171 c#11pmos@11_p-trans-poly-left##2 c#11pmos@11_p-trans-poly-left##3 8.68
+C187 c#11pmos@11_p-trans-poly-left##3 0 0.15fF
+R172 c#11pmos@11_p-trans-poly-left##3 c 8.68
+R173 c c##0 9.92
+C188 c##0 0 0.18fF
+R174 c##0 c##1 9.92
+C189 c##1 0 0.18fF
+R175 c##1 c##2 9.92
+C190 c##2 0 0.18fF
+R176 c##2 c##3 9.92
+C191 c##3 0 0.18fF
+R177 c##3 c##4 9.92
+C192 c##4 0 0.18fF
+R178 c##4 c##5 9.92
+C193 c##5 0 0.18fF
+R179 c##5 c##6 9.92
+C194 c##6 0 0.18fF
+R180 c##6 c##7 9.92
+C195 c##7 0 0.18fF
+R181 c##7 c##8 9.92
+C196 c##8 0 0.18fF
+R182 c##8 c#12nmos@11_n-trans-poly-right 9.92
+R183 b#16pmos@12_p-trans-poly-left b#16pmos@12_p-trans-poly-left##0 9.743
+C197 b#16pmos@12_p-trans-poly-left##0 0 0.17fF
+R184 b#16pmos@12_p-trans-poly-left##0 b#16pmos@12_p-trans-poly-left##1 9.743
+C198 b#16pmos@12_p-trans-poly-left##1 0 0.17fF
+R185 b#16pmos@12_p-trans-poly-left##1 b#16pmos@12_p-trans-poly-left##2 9.743
+C199 b#16pmos@12_p-trans-poly-left##2 0 0.17fF
+R186 b#16pmos@12_p-trans-poly-left##2 b#16pmos@12_p-trans-poly-left##3 9.743
+C200 b#16pmos@12_p-trans-poly-left##3 0 0.17fF
+R187 b#16pmos@12_p-trans-poly-left##3 b#16pmos@12_p-trans-poly-left##4 9.743
+C201 b#16pmos@12_p-trans-poly-left##4 0 0.17fF
+R188 b#16pmos@12_p-trans-poly-left##4 b#16pmos@12_p-trans-poly-left##5 9.743
+C202 b#16pmos@12_p-trans-poly-left##5 0 0.17fF
+R189 b#16pmos@12_p-trans-poly-left##5 b 9.743
+R190 b b##0 9.3
+C203 b##0 0 0.17fF
+R191 b##0 b##1 9.3
+C204 b##1 0 0.17fF
+R192 b##1 b##2 9.3
+C205 b##2 0 0.17fF
+R193 b##2 b##3 9.3
+C206 b##3 0 0.17fF
+R194 b##3 b##4 9.3
+C207 b##4 0 0.17fF
+R195 b##4 b##5 9.3
+C208 b##5 0 0.17fF
+R196 b##5 b##6 9.3
+C209 b##6 0 0.17fF
+R197 b##6 b#17nmos@12_n-trans-poly-right 9.3
+R198 a#16pmos@13_p-trans-poly-left a#16pmos@13_p-trans-poly-left##0 9.989
+C210 a#16pmos@13_p-trans-poly-left##0 0 0.18fF
+R199 a#16pmos@13_p-trans-poly-left##0 a#16pmos@13_p-trans-poly-left##1 9.989
+C211 a#16pmos@13_p-trans-poly-left##1 0 0.18fF
+R200 a#16pmos@13_p-trans-poly-left##1 a#16pmos@13_p-trans-poly-left##2 9.989
+C212 a#16pmos@13_p-trans-poly-left##2 0 0.18fF
+R201 a#16pmos@13_p-trans-poly-left##2 a#16pmos@13_p-trans-poly-left##3 9.989
+C213 a#16pmos@13_p-trans-poly-left##3 0 0.18fF
+R202 a#16pmos@13_p-trans-poly-left##3 a#16pmos@13_p-trans-poly-left##4 9.989
+C214 a#16pmos@13_p-trans-poly-left##4 0 0.18fF
+R203 a#16pmos@13_p-trans-poly-left##4 a#16pmos@13_p-trans-poly-left##5 9.989
+C215 a#16pmos@13_p-trans-poly-left##5 0 0.18fF
+R204 a#16pmos@13_p-trans-poly-left##5 a#16pmos@13_p-trans-poly-left##6 9.989
+C216 a#16pmos@13_p-trans-poly-left##6 0 0.18fF
+R205 a#16pmos@13_p-trans-poly-left##6 a#16pmos@13_p-trans-poly-left##7 9.989
+C217 a#16pmos@13_p-trans-poly-left##7 0 0.18fF
+R206 a#16pmos@13_p-trans-poly-left##7 a 9.989
+R207 a a##0 8.783
+C218 a##0 0 0.15fF
+R208 a##0 a##1 8.783
+C219 a##1 0 0.15fF
+R209 a##1 a##2 8.783
+C220 a##2 0 0.15fF
+R210 a##2 a##3 8.783
+C221 a##3 0 0.15fF
+R211 a##3 a##4 8.783
+C222 a##4 0 0.15fF
+R212 a##4 a#17nmos@13_n-trans-poly-right 8.783
+.ENDS fulladder
+
+*** CELL: FTC{lay}
+.SUBCKT FTC C Cin Cout I1 I2 I3 I4 S gnd vdd
+Xfulladde@1 I1 I2 I3 Cout gnd net@6 vdd fulladder
+Xfulladde@2 net@6 I4 Cin C gnd S vdd fulladder
+** Extracted Parasitic Capacitors ***
+C0 net@6 0 4.3fF
+C1 I4 0 17.34fF
+C2 C 0 13.83fF
+C3 S 0 3.82fF
+C4 Cout 0 16.13fF
+C5 Cin 0 5.82fF
+C6 I3 0 4.51fF
+C7 I2 0 2.79fF
+C8 I1 0 3.47fF
+** Extracted Parasitic Resistors ***
+.ENDS FTC
+
+*** TOP LEVEL CELL: PPR{lay}
+XFTC@1 FTC@1_C net@0 FTC@1_Cout FTC@1_I1 FTC@1_I2 FTC@1_I3 FTC@1_I4 FTC@1_S 
++gnd vdd FTC
+XFTC@2 FTC@2_C net@3 net@0 FTC@2_I1 FTC@2_I2 FTC@2_I3 FTC@2_I4 FTC@2_S gnd_1 
++vdd_1 FTC
+XFTC@3 FTC@3_C net@6 net@3 FTC@3_I1 FTC@3_I2 FTC@3_I3 FTC@3_I4 FTC@3_S gnd_2 
++vdd_2 FTC
+XFTC@4 FTC@4_C net@9 net@6 FTC@4_I1 FTC@4_I2 FTC@4_I3 FTC@4_I4 FTC@4_S gnd_3 
++vdd_3 FTC
+XFTC@5 FTC@5_C net@12 net@9 FTC@5_I1 FTC@5_I2 FTC@5_I3 FTC@5_I4 FTC@5_S gnd_4 
++vdd_4 FTC
+XFTC@6 FTC@6_C net@15 net@12 FTC@6_I1 FTC@6_I2 FTC@6_I3 FTC@6_I4 FTC@6_S 
++gnd_5 vdd_5 FTC
+XFTC@7 FTC@7_C net@18 net@15 FTC@7_I1 FTC@7_I2 FTC@7_I3 FTC@7_I4 FTC@7_S 
++gnd_6 vdd_6 FTC
+XFTC@8 FTC@8_C net@21 net@18 FTC@8_I1 FTC@8_I2 FTC@8_I3 FTC@8_I4 FTC@8_S 
++gnd_7 vdd_7 FTC
+XFTC@9 FTC@9_C net@24 net@21 FTC@9_I1 FTC@9_I2 FTC@9_I3 FTC@9_I4 FTC@9_S 
++gnd_8 vdd_8 FTC
+XFTC@10 FTC@10_C net@27 net@24 FTC@10_I1 FTC@10_I2 FTC@10_I3 FTC@10_I4 
++FTC@10_S gnd_9 vdd_9 FTC
+XFTC@11 FTC@11_C net@30 net@27 FTC@11_I1 FTC@11_I2 FTC@11_I3 FTC@11_I4 
++FTC@11_S gnd_10 vdd_10 FTC
+XFTC@12 FTC@12_C net@33 net@30 FTC@12_I1 FTC@12_I2 FTC@12_I3 FTC@12_I4 
++FTC@12_S gnd_11 vdd_11 FTC
+XFTC@13 FTC@13_C FTC@13_Cin net@33 FTC@13_I1 FTC@13_I2 FTC@13_I3 FTC@13_I4 
++FTC@13_S gnd_12 vdd_12 FTC
+** Extracted Parasitic Capacitors ***
+C0 net@0 0 2.47fF
+C1 net@27 0 2.47fF
+C2 net@24 0 2.47fF
+C3 net@30 0 2.47fF
+C4 net@33 0 2.47fF
+C5 net@3 0 2.47fF
+C6 net@6 0 2.47fF
+C7 net@9 0 2.47fF
+C8 net@12 0 2.29fF
+C9 net@15 0 2.47fF
+C10 net@18 0 2.47fF
+C11 net@21 0 2.47fF
+** Extracted Parasitic Resistors ***
+.END
