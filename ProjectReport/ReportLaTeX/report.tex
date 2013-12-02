@@ -49,7 +49,7 @@ Louis-Charles Trudeau}\\
 
 \begin{abstract}
 %\boldmath
-A Multiplier is one of the most important elements of any modern processor, whether it be for the sake of pure multiplication to evaluate for arithmetic purposes or for other functions that make use of that function. It is one of the processes that consume a significant amount of processing time, since it is a series of additions, making it very important to optimize. This report presents the modified booth algorithm applied on an 8-bit level. The multiplier’s performance is then compared to that of the Baugh-Wooley Multiplier with respect to area, transistor count and delay. Integration within the MIPS core is also implemented and presented in this paper. The CAD tool used for the design process is Electric, while testbenching was done by Verilog file exports on ModelSim, while the test vectors were generated using a C program.
+A Multiplier is one of the most important elements of any modern processor, whether it be for the sake of pure multiplication to evaluate for arithmetic purposes or for other functions that make use of that function. It is one of the processes that consume a significant amount of processing time, since it is a series of additions, making it very important to optimize. This report presents the Modified Booth algorithm applied on an 8-bit level. The multiplier’s performance is then compared to that of the Baugh-Wooley Multiplier with respect to area, transistor count and delay. Integration within the MIPS core is also implemented and presented in this paper. The CAD tool used for the design process is Electric, while testbenching was done by Verilog file exports on ModelSim, while the test vectors were generated using a C program.
 \end{abstract}
 
 
@@ -67,16 +67,18 @@ multiplication of 2 given 8-bit vectors, M and N, results in a vector larger tha
 
 Accordingly, using the most basic form of the array multiplier, we realize that that the most significant bit (MSB) takes 2M-2 time units till it reaches its final output. This is a significant waste of processing time, given that the multiplier is essentially on module within the entire processor. Hence, a logical optimization is to group the partial products together to reduce their number, hence reducing the number of additions that need to be done, which would reduce the amount of time taken to compute the product.
 
-Modified booth algorithm introduces this type of grouping based on the inputs being inserted into the multiplier, which is discussed in the upcoming Section.
-\emph{Our goal is to produce a fast 8-bit multiplier, reducing both area and time delay compared to the regular Baugh-Wooley Multiplier. The multiplier implements the ModifiedBooth Logic and is integrated within the reduced 8-bit MIPS processor.
-}
+Modified Booth algorithm \cite{mcs} introduces this type of grouping based on 
+the inputs being inserted into the multiplier, which is discussed in the upcoming Section.
+\emph{Our goal is to produce a fast 8-bit multiplier, reducing both area and time delay compared to the 
+regular Baugh-Wooley Multiplier \cite{cash}. The multiplier implements the Modified 
+Booth Logic and is integrated within the reduced 8-bit MIPS processor \cite{tb}}.
 
 \section{Booth Logic}
 
-The booth logic depends on an important metric r, which defines the number of partial products to be grouped together. Accordingly, the radix of the system is defined to be 2r. The radix itself defines the weight by which each and every of the partial products differ from the one to the following. We hence observe that the weight of the r=2, is a radix of 4, since grouping together 2 elements will result in a shift of 2 between each of the partial products which is equivalent to multiplying by 4 from one to the following. The utilization of a radix-4 system provides a reduction in the number of partial products reaching $\frac{M+1}{2}$
+The Booth logic depends on an important metric r, which defines the number of partial products to be grouped together. Accordingly, the radix of the system is defined to be 2r. The radix itself defines the weight by which each and every of the partial products differ from the one to the following. We hence observe that the weight of the $r=2$, is a radix of 4, since grouping together 2 elements will result in a shift of 2 between each of the partial products which is equivalent to multiplying by 4 from one to the following. The utilization of a radix-4 system provides a reduction in the number of partial products reaching $\frac{M+1}{2}$
 instead of M, which is almost half, hence a significant improvement. The size of each vector is N+1.
 
-The radix-4 system is the one used in this project. The 2 vectors being multiplied will be referred to as X and Y for convenience within this Section. This leads to having the 4 possible values of the partial products of Y being 0, Y, 2Y and 3Y. 2Y can be easily achieved using the single shift of the partial product; however, 3Y would require an adder, eliminating the whole point of the booth logic. Accordingly, a workaround would be to consider 3Y as –Y+4Y, while 2Y would become -2Y+4Y, with the first part of the sum accounted for earlier then the second part following that. This leads to observing of 3 bits at a time, the MSB from the previous subvector taken, with the other current 2. Accordingly Table\ref{tab:t1} shows the truth table for this type of implementation.
+The radix-4 system is the one used in this project. The 2 vectors being multiplied will be referred to as X and Y for convenience within this Section. This leads to having the 4 possible values of the partial products of Y being 0, Y, 2Y and 3Y. 2Y can be easily achieved using the single shift of the partial product; however, 3Y would require an adder, eliminating the whole point of the Booth logic. Accordingly, a workaround would be to consider 3Y as –Y+4Y, while 2Y would become -2Y+4Y, with the first part of the sum accounted for earlier then the second part following that. This leads to observing of 3 bits at a time, the MSB from the previous subvector taken, with the other current 2. Accordingly Table \ref{tab:t1} shows the truth table for this type of implementation.
 
 \begin{table}[!h]
 %% increase table row spacing, adjust to taste
@@ -119,14 +121,14 @@ The single, double and negative signals are the selected values that signify the
   \centering
   \includegraphics[width=0.4\textwidth]{2.png}
   \centering
-  \caption{Dot Diagram with Sign Extension \cite{tb}}
+  \caption{Dot Diagram with Sign Extension, as presented in \cite{tb}}
   \label{fig:2}
 \end{figure}
 
 
 \section{Architecture}
 
-The main logic to implement the booth multiplier is to be divided into several parts describing the architecture of the multiplier. These parts are: the encoder, the partial products generator, the compressor tree and the final carry propagate adder. All the parts are presented in the following Subsections, with its critical path being described at the end of each.
+The main logic to implement the Booth Multiplier is to be divided into several parts describing the architecture of the multiplier. These parts are: the encoder, the partial products generator, the compressor tree and the final carry propagate adder. All the parts are presented in the following Subsections, with its critical path being described at the end of each.
 
 \subsection{Encoder}
 
@@ -328,7 +330,7 @@ It is seen that the FA3 design results in the least number of transistors per bi
 \end{figure}
 
 
-The whole design in Figure \ref{fig:9} is the schematic level, while the layout level is shown below as part of the MIPS core to save report space.
+The whole design in Figure \ref{fig:9} is the schematic level, while the layout level is shown below as part of the MIPS core.
 
 
 \section{MIPS Integration}
@@ -362,7 +364,7 @@ This new instruction set architecture is what is be used at the assembly level w
   \centering
   \includegraphics[width=0.45\textwidth]{10.png}
   \centering
-  \caption{Modified MIPS datapath}
+  \caption{Modified MIPS datapath, based on the initial desing presented in \cite{tb}}
   \label{fig:10}
 \end{figure}
 
@@ -380,7 +382,7 @@ This is then also reflected in modifications for the PLA generator, which is the
 
 \section{Comparison: Baugh-Wooley Multiplier}
 
-Baugh-Wooley Multiplier (BWM) is the 2’s compliment option for the basic array multiplier. Figure \ref{fig:12} shows the schematic for it.
+Baugh-Wooley Multiplier (BWM) is the 2's compliment option for the basic array multiplier. Figure \ref{fig:12} shows the schematic for it.
 
 \vspace{-10pt}
 
@@ -393,11 +395,11 @@ Baugh-Wooley Multiplier (BWM) is the 2’s compliment option for the basic array
 \end{figure}
 
 
-The main differences between BWM and the regular array multiplier is that for the blocks on the bottom and left sides, the xi and yi are NANDed instead of ANDed, along with a 2 Vdd connections as shown in the figure instead of ground. Due to regularity and similarity in all blocks, the design demonstrates compactness in the layout level as seen in Figure \ref{fig:13}.
+The main differences between BWM and the regular array multiplier is that for the blocks on the bottom and left sides, the $x_{i}$ and $y_{i}$ are NANDed instead of ANDed, along with a 2 $V_{dd}$ connections as shown in the figure instead of ground. Due to regularity and similarity in all blocks, the design demonstrates compactness in the layout level as seen in Figure \ref{fig:13}.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.45\textwidth]{13.png}
+  \includegraphics[width=0.4\textwidth]{13.png}
   \centering
   \caption{BWM layout}
   \label{fig:13}
@@ -433,7 +435,8 @@ Critical Path Delay & 8 XORs + 10 ANDs + 2 NANDs
 
 \subsection{16-bit Comparison}
 
-Without designing, the results for the critical path delay for both multipliers were theoretically analyzed and were shown to give the following Table \ref{tab:t9}:
+As an additional theoretical extrapolation, the critical path delays of both multipliers 
+were analyzed. The results are shown in the following Table \ref{tab:t9}:
 
 \begin{table}[!h]
 %% increase table row spacing, adjust to taste
@@ -459,7 +462,7 @@ A plot of the total number of gates the process needs to go through vs the numbe
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.4\textwidth]{14.png}
+  \includegraphics[width=0.35\textwidth]{14.png}
   \centering
   \caption{BWM and Booth Multiplier Comparison: Total Number of gates}
   \label{fig:14}
@@ -469,14 +472,21 @@ A plot of the total number of gates the process needs to go through vs the numbe
 
 \section{Evaluation}
 
-Evaluating this, we see that the main strength of the booth multiplier is for the critical path delay it has compared to BWM. This is also a function of the number of bits being used; as they increase, the delay slope for BWM steeps higher than the booth multiplier making the latter more efficient.
+Evaluating this, we see that the main strength of the Booth Multiplier is the smaller critical path delay compared to BWM. 
+This is also a function of the number of bits being used; as they increase, the delay slope 
+for BWM steeps higher than the Booth Multiplier making the latter more efficient.
 
 
 
 \section{Testing}
 
 
-All designs were passed thorugh an initial testing phase for functionality: Booth multiplier through Quartus and Array Multiplier thorugh a written Verilog code. The final electric products were tested by exporting the Verilog files and testbenching them through ModelSim. The MIPS full design verification was done by MILE, the MIPS emulator. All test vectors were completely exhaustive, covering all 28*28=216 options for the input vectors X and Y.
+All designs were passed through an initial testing phase for functionality: 
+Booth multiplier through Quartus and Array Multiplier thorugh a written Verilog code. 
+The final designs were exported to Verilog decks and tested using ModelSim. 
+All test vectors were completely exhaustive, covering all the 65536 different input vectors.
+The MIPS assembly codes were generated using MILE, a MIPS emulator \cite{mile}, 
+and they were tested using Modelsim.
 
 
 
@@ -501,6 +511,8 @@ Neil Weste and David Harris. \emph{CMOS VLSI Design: A Circuits and
 Systems Perspective}, 4th edition, Addison-Wesley Publishing Company, 
 USA.
 
+\bibitem{mile} MILE home page,
+\href{http://www.cslab.ece.ntua.gr/courses/comparch/assign.go}{http://www.cslab.ece.ntua.gr/courses/comparch/assign.go}.
 
 
 \end{thebibliography}

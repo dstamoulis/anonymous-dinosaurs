@@ -8,17 +8,17 @@ pdf:
 	xelatex ${file}
 
 # dvi output uses .eps figure files
-dvi:
-	latex ${file}
+#dvi:
+#	latex ${file}
 
 # ps output uses .eps figure files
-ps:	dvi
-	dvips ${file}.dvi -o ${file}.ps
+#ps:	dvi
+#	dvips ${file}.dvi -o ${file}.ps
 
 backup:
-	zip -9y versions/version-`date +"%Y%m%d"`.zip *
+	zip -9y version-`date +"%Y%m%d"`.zip *
 
 
 # target clean is not complete
 clean:
-	-rm  ${file}.pdf ${file}.aux ${file}.log ${file}.out ${file}.dvi
+	-rm  ${file}.pdf ${file}.aux ${file}.log ${file}.out 
