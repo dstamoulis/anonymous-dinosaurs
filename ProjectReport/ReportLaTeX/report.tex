@@ -142,6 +142,33 @@ Through overall: 1 XOR
 The whole design in FIGURE9 is the schematic level, while the layout level is shown below as part of the MIPS core to save report space.
 
 
+\section{MIPS Integration}
+
+In order to integrate the design into the 8-bit MIPS core, modifications to the datapath needed to be implemented along with the Finite State Machine (FSM) to define the states of the processor for the PLA controller. Accordingly, M-type command was introduced and it is defined as follows:
+
+This new instruction set architecture is what is be used at the assembly level when calling for the multiplier function which would accordingly call on the proper pathway from the modified datapath shown in FIGURE10.
+
+This is then also reflected in modifications for the PLA generator, which is then embedded into the controller. The layout of the entire design is then integrated within the MIPS core, with the ALU shifted to save space for the multiplier as shown in FIGURE11.
+
+\section{Comparison: Baugh-Wooley Multiplier}
+
+Baugh-Wooley Multiplier (BWM) is the 2’s compliment option for the basic array multiplier. FIGURE12 shows the schematic for it.
+
+The main differences between BWM and the regular array multiplier is that for the blocks on the bottom and left sides, the xi and yi are NANDed instead of ANDed, along with a 2 Vdd connections as shown in the figure instead of ground. Due to regularity and similarity in all blocks, the design demonstrates compactness in the layout level as seen in FIGURE13.
+
+
+\subsection{8-bit Comparison}
+
+The table demonstrates that Transistor Count and Area are relatively superior for the BWM, with the Booth Multiplier superior for the Critical Path Delay.
+
+
+\subsection{16-bit Comparison}
+
+Without designing, the results for the critical path delay for both multipliers were theoretically analyzed and were shown to give the following table:
+
+
+A plot of the total number of gates the process needs to go through vs the number of bits is shown in FIGURE14.
+
 
 
 
