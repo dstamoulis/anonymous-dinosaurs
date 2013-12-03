@@ -6,6 +6,7 @@ file=report
 # for make pdf, a make clean may be necessary after a make dvi
 pdf:
 	xelatex ${file}
+	xelatex ${file}
 
 # dvi output uses .eps figure files
 #dvi:
